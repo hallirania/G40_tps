@@ -1,5 +1,5 @@
 # EXAMEN2024
-#Question 1 — Constructeur de Game
+# Question 1 — Constructeur de Game
 
 
  class Game(Object):
@@ -8,7 +8,7 @@
         self.nbr_sticks = nbr_sticks
         self.players = [ ]
 
-#Question 2 — Méthode listen 
+# Question 2 — Méthode listen 
 
 
  def listen(self, port):
@@ -21,7 +21,7 @@
 
 
 
-#Question 3 — communicate_with_client
+# Question 3 — communicate_with_client
 
 
 def communicate_with_client(self, client_id: int) -> None:
@@ -40,7 +40,7 @@ def communicate_with_client(self, client_id: int) -> None:
                 send(i, "gagné")
 
                 
-#Question 4 — Threads + Fonction principale 
+# Question 4 — Threads + Fonction principale 
 
 Modification de communicate_with_client : ajouter au début :
 send(client_id, f"Il reste {self.nbr_sticks} bâtonnets")
