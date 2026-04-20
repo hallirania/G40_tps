@@ -1,6 +1,6 @@
 # EXAMEN2024
-Question 1 — Constructeur de Game
-*********************************
+#Question 1 — Constructeur de Game
+
 
  class Game(Object):
     def __init__(self, max_gamers, nbr_sticks) -> None:
@@ -8,8 +8,8 @@ Question 1 — Constructeur de Game
         self.nbr_sticks = nbr_sticks
         self.players = [ ]
 
-Question 2 — Méthode listen 
-***************************
+#Question 2 — Méthode listen 
+
 
  def listen(self, port):
     self.server_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
@@ -21,8 +21,8 @@ Question 2 — Méthode listen
 
 
 
-Question 3 — communicate_with_client
-*************************************
+#Question 3 — communicate_with_client
+
 
 def communicate_with_client(self, client_id: int) -> None:
     send(client_id, "Choisissez 1, 2 ou 3 bâtonnets à retirer")
@@ -40,8 +40,8 @@ def communicate_with_client(self, client_id: int) -> None:
                 send(i, "gagné")
 
                 
-Question 4 — Threads + Fonction principale 
-******************************************
+#Question 4 — Threads + Fonction principale 
+
 Modification de communicate_with_client : ajouter au début :
 send(client_id, f"Il reste {self.nbr_sticks} bâtonnets")
 
@@ -60,8 +60,8 @@ def main(self, port):
         for t in threads:
             t.join()
 
-Question 5 — TCP vs UDP
-***********************
+# Question 5 — TCP vs UDP
+
 Changements à apporter :
 SOCK_STREAM → SOCK_DGRAM
 Supprimer listen() et accept()
